@@ -52,3 +52,10 @@ gsap.from(".alert", {
 function toggleSidebar() {
     document.querySelector(".sidebar").classList.toggle("active");
 }
+
+// Copy Code Function
+function copyCode(button) {
+    const code = button.previousElementSibling.querySelector("code").innerText;
+    navigator.clipboard.writeText(code);
+    alert("Code copied to clipboard!");
+}
