@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial modifikasi aplikasi dan game seperti Grok Beta Unlock SuperGrok dengan tampilan profesional.">
+    <title>Tutorial Mod Aplikasi & Game - Grok Beta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile">
+                <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="50" fill="#00ff88"/>
+                    <circle cx="50" cy="40" r="20" fill="#121212"/>
+                    <path d="M30,70 Q50,90 70,70" fill="none" stroke="#121212" stroke-width="8"/>
+                </svg>
+                <h3>abiqkz</h3>
+                <p>Creator of ModMaster</p>
+            </div>
+            <div class="contact">
+                <h5>Contact</h5>
+                <a href="mailto:abiqkzhandshome.@rommiui.com" class="btn btn-contact">
+                    <i class="fas fa-envelope"></i> abiqkzhandshome.@rommiui.com
+                </a>
+            </div>
+        </div>
+        <button class="sidebar-toggle" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ModMaster</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutorial">Tutorial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4">Tutorial Mod Aplikasi & Game</h1>
+            <p class="lead">Pelajari cara memodifikasi aplikasi seperti Grok Beta Unlock SuperGrok dengan langkah mudah!</p>
+            <a href="#tutorial" class="btn btn-primary btn-lg">Lihat Tutorial</a>
+        </div>
+    </section>
+
+    <!-- Tutorial Section -->
+    <section id="tutorial" class="tutorial-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tutorial Modifikasi Grok Beta</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card bg-dark text-white shadow-lg">
+                        <div class="card-body">
+                            <h4 class="card-title">Langkah-Langkah Modifikasi</h4>
+                            <ol class="tutorial-list">
+                                <li>
+                                    <strong>Masuk ke MT Manager</strong>
+                                    <p>Unduh dan instal aplikasi MT Manager atau gunakan versi modifikasi jika belum memilikinya.</p>
+                                </li>
+                                <li>
+                                    <strong>Ekstrak Aplikasi</strong>
+                                    <p>Buka sidebar MT Manager, klik "Ekstrak", pilih aplikasi Grok, lalu ubah menjadi APK menggunakan SplitApks atau langsung di MT Manager.</p>
+                                </li>
+                                <li>
+                                    <strong>Akses Fungsi Kill Sign</strong>
+                                    <p>Klik "Fungsi", cari "Kill Sign", masuk ke bagian DEX, pilih semua, cari string "grok_pro", klik navigasi, pilih <code>Lgrok_api_v2/SubscriptionTier;</code>, tekan "Find Usage", dan cari file <code>smali f</code>.</p>
+                                </li>
+                                <li>
+                                    <strong>Bypass Subscription</strong>
+                                    <p>Edit kode smali seperti berikut:</p>
+                                    <pre><code>.method public final c()Z
+    .registers 1
+    const/4 p0, 0x1
+    return p0
+.end method
+
+.method public final d()Z
+    .registers 1
+    const/4 p0, 0x1
+    return p0
+.end method</code></pre>
+                                </li>
+                                <li>
+                                    <strong>Simpan dan Tanda Tangan</strong>
+                                    <p>Simpan perubahan, tanda tangani APK, masuk ke bagian manifest, hapus activity <code>pairip</code>. Selamat, Anda berhasil memodifikasi aplikasi Grok!</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Disclaimer -->
+                    <div class="alert alert-warning text-center mt-4">
+                        <p><strong>Disclaimer:</strong> Tutorial ini hanya untuk tujuan edukasi. Modifikasi aplikasi dapat melanggar ketentuan layanan dan hukum setempat. Gunakan dengan risiko sendiri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-4">
+        <p class="mb-0">© 2025 ModMaster. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script src="script/scripts.js"></script>
+</body>
+      </html>
