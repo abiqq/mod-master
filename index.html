@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
         /* General Styling */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #121212; /* AMOLED Black */
+            background-color: #000000; /* AMOLED Black */
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -27,9 +28,9 @@
             left: 0;
             width: 250px;
             height: 100%;
-            background-color: #1c1c1c;
+            background-color: #111111;
             padding: 30px 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
             z-index: 1000;
             transform: translateX(0);
             transition: transform 0.3s ease;
@@ -60,7 +61,7 @@
         }
         .btn-contact {
             background-color: #00ff88;
-            color: #121212;
+            color: #000000;
             padding: 10px 15px;
             border-radius: 25px;
             text-decoration: none;
@@ -87,18 +88,19 @@
             cursor: pointer;
         }
         .sidebar-toggle i {
-            color: #121212;
+            color: #000000;
         }
 
         /* Navbar */
         .navbar {
-            background-color: #1c1c1c;
+            background-color: #111111;
             padding: 15px 0;
             z-index: 999;
         }
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: 700;
+            color: #00ff88;
         }
         .nav-link {
             color: #ffffff !important;
@@ -112,7 +114,7 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+            background: linear-gradient(135deg, #111111, #222222);
             padding: 150px 0;
             text-align: center;
         }
@@ -132,42 +134,52 @@
             padding: 10px 30px;
             font-weight: 600;
             border-radius: 25px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .btn-primary:hover {
-            background-color: #00cc6f;
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
         }
 
         /* Tutorial Section */
         .tutorial-section {
-            background-color: #1c1c1c;
+            background-color: #000000;
             padding: 60px 0;
         }
         .tutorial-section h2 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 40px;
+            color: #00ff88;
         }
         .card {
-            background-color: #252525;
+            background-color: #111111;
             border: none;
             border-radius: 15px;
             padding: 20px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
         }
         .card-title {
             font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 20px;
+            color: #00ff88;
+        }
+        .tutorial-list {
+            padding-left: 20px;
         }
         .tutorial-list li {
             margin-bottom: 30px;
             font-size: 1.1rem;
             line-height: 1.6;
+        }
+        .tutorial-list li::marker {
+            color: #00ff88;
+            font-weight: bold;
         }
         .tutorial-list strong {
             color: #00ff88;
@@ -177,7 +189,7 @@
             color: #b0b0b0;
         }
         pre {
-            background-color: #333;
+            background-color: #222222;
             padding: 15px;
             border-radius: 10px;
             color: #00ff88;
@@ -185,29 +197,39 @@
             font-size: 0.9rem;
             white-space: pre-wrap;
             word-wrap: break-word;
+            margin-top: 10px;
         }
-        .btn-outline-secondary {
-            color: #00ff88;
-            border-color: #00ff88;
-        }
-        .btn-outline-secondary:hover {
+        .btn-copy {
             background-color: #00ff88;
-            color: #121212;
+            color: #000000;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
         }
+        .btn-copy:hover {
+            background-color: #00cc6f;
+        }
+
+        /* Disclaimer */
         .alert-warning {
             background-color: #ffca28;
-            color: #121212;
+            color: #000000;
             border: none;
             border-radius: 10px;
             padding: 15px;
             margin-top: 20px;
+            text-align: center;
         }
 
         /* Footer */
         footer {
-            background-color: #1c1c1c;
+            background-color: #111111;
             color: #b0b0b0;
             padding: 20px 0;
+            text-align: center;
         }
 
         /* Animations */
@@ -249,8 +271,8 @@
             <div class="profile">
                 <svg class="profile-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="50" fill="#00ff88"/>
-                    <circle cx="50" cy="40" r="20" fill="#121212"/>
-                    <path d="M30,70 Q50,90 70,70" fill="none" stroke="#121212" stroke-width="8"/>
+                    <circle cx="50" cy="40" r="20" fill="#000000"/>
+                    <path d="M30,70 Q50,90 70,70" fill="none" stroke="#000000" stroke-width="8"/>
                 </svg>
                 <h3>AbiqKZ</h3>
                 <p>Creator of ModMaster</p>
@@ -262,10 +284,10 @@
                 </a>
             </div>
         </div>
-        <button class="sidebar-toggle" onclick="toggleSidebar()">
-            <i class="fas fa-bars"></i>
-        </button>
     </div>
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -301,23 +323,23 @@
                 <div class="col-md-8 mx-auto">
                     <div class="card bg-dark text-white shadow-lg">
                         <div class="card-body">
-                            <h4 class="card-title">Langkah-Langkah Modifikasi</h4>
+                            <h3 class="card-title">Unlock SuperGrok Features</h3>
                             <ol class="tutorial-list">
                                 <li>
                                     <strong>Masuk ke MT Manager</strong>
-                                    <p>Unduh dan instal aplikasi MT Manager atau gunakan versi modifikasi jika belum memilikinya.</p>
+                                    <p>Buka aplikasi MT Manager di perangkat Anda dan siapkan file APK Grok Beta yang akan dimodifikasi.</p>
                                 </li>
                                 <li>
                                     <strong>Ekstrak Aplikasi</strong>
-                                    <p>Buka sidebar MT Manager, klik "Ekstrak", pilih aplikasi Grok, lalu ubah menjadi APK menggunakan SplitApks atau langsung di MT Manager.</p>
+                                    <p>Ekstrak APK menggunakan MT Manager untuk mengakses file smali di dalamnya.</p>
                                 </li>
                                 <li>
                                     <strong>Akses Fungsi Kill Sign</strong>
-                                    <p>Klik "Fungsi", cari "Kill Sign", masuk ke bagian DEX, pilih semua, cari string "grok_pro", klik navigasi, pilih <code>Lgrok_api_v2/SubscriptionTier;</code>, tekan "Find Usage", dan cari file <code>smali f</code>.</p>
+                                    <p>Cari file smali yang mengatur verifikasi tanda tangan (biasanya di folder `smali/com/...`).</p>
                                 </li>
                                 <li>
                                     <strong>Bypass Subscription</strong>
-                                    <p>Edit kode smali seperti berikut:</p>
+                                    <p>Ganti kode verifikasi dengan kode berikut untuk membuka fitur SuperGrok:</p>
                                     <pre><code>.method public final c()Z
     .registers 1
     const/4 p0, 0x1
@@ -329,18 +351,21 @@
     const/4 p0, 0x1
     return p0
 .end method</code></pre>
-                                    <button onclick="copyCode(this)" class="btn btn-sm btn-outline-secondary mt-2">Copy Code</button>
+                                    <button onclick="copyCode(this)" class="btn btn-copy">Copy Code</button>
                                 </li>
                                 <li>
                                     <strong>Simpan dan Tanda Tangan</strong>
-                                    <p>Simpan perubahan, tanda tangani APK, masuk ke bagian manifest, hapus activity <code>pairip</code>. Selamat, Anda berhasil memodifikasi aplikasi Grok!</p>
+                                    <p>Simpan perubahan, kompilasi ulang APK, lalu tanda tangani menggunakan MT Manager.</p>
                                 </li>
                             </ol>
                         </div>
                     </div>
-                    <!-- Disclaimer -->
-                    <div class="alert alert-warning text-center mt-4">
-                        <p><strong>Disclaimer:</strong> Tutorial ini hanya untuk tujuan edukasi. Modifikasi aplikasi dapat melanggar ketentuan layanan dan hukum setempat. Gunakan dengan risiko sendiri.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="alert alert-warning mt-4">
+                        <strong>Disclaimer:</strong> Modifikasi aplikasi hanya untuk edukasi. Pengguna bertanggung jawab atas risiko yang timbul.
                     </div>
                 </div>
             </div>
@@ -348,8 +373,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-center py-4">
-        <p class="mb-0">© 2025 ModMaster. All rights reserved.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 abiqkz - ModMaster. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- Scripts -->
@@ -361,27 +388,9 @@
         gsap.registerPlugin(ScrollTrigger);
 
         // Hero Section Animation
-        gsap.from(".hero-section h1", {
-            duration: 1,
-            y: 100,
-            opacity: 0,
-            ease: "power3.out",
-            delay: 0.2
-        });
-        gsap.from(".hero-section p", {
-            duration: 1,
-            y: 100,
-            opacity: 0,
-            ease: "power3.out",
-            delay: 0.4
-        });
-        gsap.from(".btn-primary", {
-            duration: 1,
-            y: 100,
-            opacity: 0,
-            ease: "power3.out",
-            delay: 0.6
-        });
+        gsap.from(".hero-section h1", { duration: 1, y: 50, opacity: 0, ease: "power3.out" });
+        gsap.from(".hero-section p", { duration: 1, y: 50, opacity: 0, ease: "power3.out", delay: 0.2 });
+        gsap.from(".btn-primary", { duration: 1, y: 50, opacity: 0, ease: "power3.out", delay: 0.4 });
 
         // Tutorial Section Animation
         gsap.from(".card", {
@@ -390,18 +399,18 @@
                 start: "top 80%",
             },
             duration: 1,
-            y: 100,
+            y: 50,
             opacity: 0,
             ease: "power3.out",
             stagger: 0.2
         });
-        gsap.from(".alert", {
+        gsap.from "(.alert", {
             scrollTrigger: {
                 trigger: ".tutorial-section",
                 start: "top 80%",
             },
             duration: 1,
-            y: 100,
+            y: 50,
             opacity: 0,
             ease: "power3.out",
             delay: 0.4
@@ -420,4 +429,4 @@
         }
     </script>
 </body>
-    </html>
+</html>
